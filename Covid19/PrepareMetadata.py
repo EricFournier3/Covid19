@@ -29,7 +29,7 @@ gisaid_metadata = os.path.join(base_dir,"data/original/data/metadata.tsv")
 lspq_sgil_extract = os.path.join(base_dir,"data/sgil_extract.tsv")
 
 gisaid_ref_sequences = os.path.join(base_dir,"data/gisaid/gisaid_wuhan_ref_20200425.fasta")
-gisaid_sequences = os.path.join(base_dir,"data/gisaid/sequences_carmen_lia_murall.fasta")
+gisaid_sequences = os.path.join(base_dir,"data/gisaid/randomseq.fasta")
 lspq_sequences = os.path.join(base_dir,"data/lspq/sequences.fasta")
 
 df_lspq = pd.read_csv(lspq_sgil_extract,delimiter="\t",index_col=False)
