@@ -4,7 +4,7 @@ CH as ch,RESULTAT_LABORATOIRE as res_lab, SUBSTR(POSTAL_CODE,1,3) as postal_code
 case
     when Max(nCoV2019_nCoV_Ct) is null
     then '0'
-    else Max(nCoV2019_nCoV_Ct)
+    else TO_CHAR(ROUND(Max(nCoV2019_nCoV_Ct)))
 end as max_ct
 
 from (select distinct f.folderno as NOLSPQ, to_char(cr.BIRTH_DATE,'YYYY-MM-DD') as DATE_NAISSANCE,
