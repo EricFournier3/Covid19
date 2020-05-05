@@ -21,8 +21,7 @@ translator = Translator()
 logging.basicConfig(level = logging.DEBUG)
 
 #todo change basedir
-#base_dir = "/data/Applications/GitScript/Covid19/NextStrainFiles/" 
-base_dir = "/data/Applications/GitScript/Covid19_add_ct/NextStrainFiles/" 
+base_dir = "/data/Applications/GitScript/Covid19/NextStrainFiles/" 
 lat_long_file = os.path.join(base_dir,"config/lat_longs.tsv")
 country_lat_long_file = os.path.join(base_dir,"config/country_lat_long.tsv")
 ordering_file = os.path.join(base_dir,"config/ordering.tsv")
