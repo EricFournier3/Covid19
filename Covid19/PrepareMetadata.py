@@ -30,7 +30,7 @@ gisaid_metadata = os.path.join(base_dir,"data/original/data/metadata.tsv")
 lspq_sgil_extract = os.path.join(base_dir,"data/sgil_extract.tsv")
 
 gisaid_ref_sequences = os.path.join(base_dir,"data/gisaid/gisaid_wuhan_ref_20200425.fasta")
-gisaid_sequences = os.path.join(base_dir,"data/gisaid/randomseq.fasta")
+gisaid_sequences = os.path.join(base_dir,"data/gisaid/gisaid_all.fasta")
 lspq_sequences = os.path.join(base_dir,"data/lspq/sequences.fasta")
 
 df_lspq = pd.read_csv(lspq_sgil_extract,delimiter="\t",index_col=False)
@@ -83,18 +83,7 @@ if  missing_country:
     logging.info(" and run CreateNextstrainConfigV2.py")
     exit(0)    
 
-for rec in SeqIO.parse(gisaid_sequences,'fasta'):
-    try:
-        seqid = re.search(r'^\S+\/(\S+\/\S+\/\d{4})\|\S+',rec.id).group(1)
-    except:
-        seqid = re.search(r'^hCoV-19\/(\S+\/\S+\/\d{4})',rec.id).group(1)
-
-    rec_id_list.append(seqid)
-    rec.id = seqid
-    rec.name = seqid
-    rec.description = ""
-    rec_list.append(rec)
-
+id_ref_list = []
 
 for rec in SeqIO.parse(gisaid_ref_sequences,'fasta'):
     try:
@@ -102,12 +91,27 @@ for rec in SeqIO.parse(gisaid_ref_sequences,'fasta'):
     except:
         seqid = re.search(r'^\S+\/(\S+\/\d{4})\|\S+',rec.id).group(1)
 
+    id_ref_list.append(seqid)
     rec_id_list.append(seqid)
     rec.id = seqid
     rec.name = seqid
     rec.description = ""
     rec_list.append(rec)
 
+for rec in SeqIO.parse(gisaid_sequences,'fasta'):
+    
+    if rec.id not in id_ref_list:
+        try:
+            seqid = re.search(r'^(\S+\/\S+\/\d{4})',rec.id).group(1)
+        except:
+            print("BUG WITH " + rec.id)
+            seqid = re.search(r'^\S+\/(\S+\/\S+\/\d{4})\|\S+',rec.id).group(1)
+
+        rec_id_list.append(seqid)
+        rec.id = seqid
+        rec.name = seqid
+        rec.description = ""
+        rec_list.append(rec)
 
 for rec in SeqIO.parse(lspq_sequences,'fasta'):
     seqid = re.search(r'(^\S+)\/\S+\/\S+',rec.id).group(1)
