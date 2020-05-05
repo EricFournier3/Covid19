@@ -1,15 +1,85 @@
-strain	virus	date	sex	age	country	division	rss	rta	country_exposure	division_exposure	rss_exposure	rta_exposure
-LSPQ_1_cmb	ncov	2020-04-24	M	67	Canada	Quebec	15-Laurentides	J6Z	Canada	Quebec	15-Laurentides	J6Z
-L00241026	ncov	2020-04-24	F	74	Canada	Quebec	07-Outaouais	J8Y	Canada	Quebec	07-Outaouais	J8Y
-Canada/BC_37_0-2/2020	ncov	2020-02-16	Female	35	Canada	British Columbia	Canada	Canada	Iran	Iran	Iran	Iran
-Canada/BC_5282984/2020	ncov	2020-03-11	Male	28	Canada	British Columbia	Canada	Canada	Canada	British Columbia	Canada	Canada
-Canada/BC_7277381/2020	ncov	2020-03-12	Female	55	Canada	British Columbia	Canada	Canada	Canada	British Columbia	Canada	Canada
-Canada/ON-PHL2445/2020	ncov	2020-01-25	Male	56	Canada	Ontario	Canada	Canada	China	Hubei	China	China
-Canada/ON_PHL2223/2020	ncov	2020	?	?	Canada	Ontario	Canada	Canada	Canada	Ontario	Canada	Canada
-Canada/ON_PHL3670/2020	ncov	2020-03-20	Female	57	Canada	Ontario	Canada	Canada	Canada	Ontario	Canada	Canada
-Canada/ON_PHL3919/2020	ncov	2020-03-14	Female	60	Canada	Ontario	Canada	Canada	Canada	Ontario	Canada	Canada
-Netherlands/Utrecht_1/2020	ncov	2020-03-03	?	?	Netherlands	Utrecht	Netherlands	Netherlands	Netherlands	Utrecht	Netherlands	Netherlands
-Portugal/PT0090/2020	ncov	2020-03-21	Female	45	Portugal		Portugal	Portugal	Portugal		Portugal	Portugal
-USA/CruiseA-12/2020	ncov	2020-02-20	?	?	USA	Diamond Princess	USA	USA	USA	Diamond Princess	USA	USA
-Wuhan-Hu-1/2019	ncov	2019-12-26	?	?	China	Hubei	China	China	China	Hubei	China	China
-Wuhan/WH01/2019	ncov	2019-12-26	Male	44	China	Hubei	China	China	China	Hubei	China	China
+strain	virus	date	sex	age	country	division	rss	rta	country_exposure	division_exposure	rss_exposure	rta_exposure	ct
+L00240556	ncov	2020-03-27	F	52	Canada	Quebec	16-Montérégie	J6J	Canada	Quebec	16-Montérégie	J6J	30
+L00240569	ncov	2020-03-27	M	62	Canada	Quebec	16-Montérégie	J0S	SUISSE	SUISSE	SUISSE	SUISSE	29
+L00240581	ncov	2020-03-27	M	24	Canada	Quebec	16-Montérégie	J6R	Canada	Quebec	16-Montérégie	J6R	37
+L00240587	ncov	2020-03-27	F	50	Canada	Quebec	16-Montérégie	J6R	Spain	Spain	Spain	Spain	23
+L00240594	ncov	2020-03-27	F	55	Canada	Quebec	16-Montérégie	J6N	CUBA	CUBA	CUBA	CUBA	22
+L00240642	ncov	2020-03-27	M	15	Canada	Quebec	16-Montérégie	J3L	Canada	Quebec	16-Montérégie	J3L	17
+L00240652	ncov	2020-03-27	F	32	Canada	Quebec	16-Montérégie	J4Y	Canada	Quebec	16-Montérégie	J4Y	23
+L00240666	ncov	2020-03-27	F	61	Canada	Quebec	16-Montérégie	J4P	ÉTATS-UNIS	ÉTATS-UNIS	ÉTATS-UNIS	ÉTATS-UNIS	23
+L00240685	ncov	2020-03-27	M	72	Canada	Quebec	16-Montérégie	J4L	Canada	Quebec	16-Montérégie	J4L	20
+L00240746	ncov	2020-03-26	M	71	Canada	Quebec	11-Gaspésie - Îles-de-la-Madeleine	G0C	Canada	Quebec	11-Gaspésie - Îles-de-la-Madeleine	G0C	14
+L00240750	ncov	2020-03-26	F	95	Canada	Quebec	11-Gaspésie - Îles-de-la-Madeleine	G0C	Canada	Quebec	11-Gaspésie - Îles-de-la-Madeleine	G0C	17
+L00240788	ncov	2020-03-27	F	24	Canada	Quebec	16-Montérégie	J2W	Canada	Quebec	16-Montérégie	J2W	23
+L00240796	ncov	2020-03-27	M	29	Canada	Quebec	30-Hors Québec	K4K	ÉTATS-UNIS	ÉTATS-UNIS	ÉTATS-UNIS	ÉTATS-UNIS	20
+L00240804	ncov	2020-03-27	M	56	Canada	Quebec	16-Montérégie	J3B	Canada	Quebec	16-Montérégie	J3B	17
+L00240811	ncov	2020-03-27	M	55	Canada	Quebec	07-Outaouais	J9A	Canada	Quebec	07-Outaouais	J9A	30
+L00240842	ncov	2020-03-27	F	6	Canada	Quebec	16-Montérégie	J5A	ÉTATS-UNIS	ÉTATS-UNIS	ÉTATS-UNIS	ÉTATS-UNIS	36
+L00240846	ncov	2020-03-27	F	74	Canada	Quebec	16-Montérégie	J5R	Canada	Quebec	16-Montérégie	J5R	19
+L00240851	ncov	2020-03-27	M	73	Canada	Quebec	16-Montérégie	J5R	Canada	Quebec	16-Montérégie	J5R	27
+L00240857	ncov	2020-03-27	M	74	Canada	Quebec	16-Montérégie	J3M	Canada	Quebec	16-Montérégie	J3M	17
+L00240866	ncov	2020-03-27	F	22	Canada	Quebec	16-Montérégie	J5B	Canada	Quebec	16-Montérégie	J5B	18
+L00240891	ncov	2020-03-27	M	55	Canada	Quebec	07-Outaouais	J8P	Canada	Quebec	07-Outaouais	J8P	25
+L00240893	ncov	2020-03-27	F	49	Canada	Quebec	16-Montérégie	J3B	Canada	Quebec	16-Montérégie	J3B	15
+L00240947	ncov	2020-03-27	F	64	Canada	Quebec	16-Montérégie	J6N	RÉP. DOMINICAINE	RÉP. DOMINICAINE	RÉP. DOMINICAINE	RÉP. DOMINICAINE	16
+L00240954	ncov	2020-03-27	M	62	Canada	Quebec	16-Montérégie	J6N	RÉP. DOMINICAINE	RÉP. DOMINICAINE	RÉP. DOMINICAINE	RÉP. DOMINICAINE	24
+L00240979	ncov	2020-03-27	F	58	Canada	Quebec	16-Montérégie	J0L	ÉTATS-UNIS	ÉTATS-UNIS	ÉTATS-UNIS	ÉTATS-UNIS	21
+L00241007	ncov	2020-03-27	F	55	Canada	Quebec	16-Montérégie	J3V	Canada	Quebec	16-Montérégie	J3V	23
+L00241026	ncov	2020-03-27	M	39	Canada	Quebec	16-Montérégie	J4K	Canada	Quebec	16-Montérégie	J4K	13
+L00241042	ncov	2020-03-27	M	20	Canada	Quebec	16-Montérégie	J3V	ROYAUME-UNI	ROYAUME-UNI	ROYAUME-UNI	ROYAUME-UNI	25
+L00241074	ncov	2020-03-27	M	25	Canada	Quebec	16-Montérégie	J4R	Canada	Quebec	16-Montérégie	J4R	24
+L00241084	ncov	2020-03-27	M	32	Canada	Quebec	16-Montérégie	J4Y	IRAQ	IRAQ	IRAQ	IRAQ	35
+L00241102	ncov	2020-03-27	M	52	Canada	Quebec	06-Montréal	H1P	Canada	Quebec	06-Montréal	H1P	15
+L00241112	ncov	2020-03-26	F	24	Canada	Quebec	17-Nunavik	J0M	Canada	Quebec	17-Nunavik	J0M	29
+L00241115	ncov	2020-03-27	M	41	Canada	Quebec	06-Montréal	H1L	Canada	Quebec	06-Montréal	H1L	19
+L00241158	ncov	2020-03-27	F	63	Canada	Quebec	16-Montérégie	J4B	Canada	Quebec	16-Montérégie	J4B	30
+L00241168	ncov	2020-03-27	M	27	Canada	Quebec	16-Montérégie	J0P	Canada	Quebec	16-Montérégie	J0P	18
+L00241192	ncov	2020-03-27	F	16	Canada	Quebec	16-Montérégie	J0P	Canada	Quebec	16-Montérégie	J0P	15
+L00241202	ncov	2020-03-27	F	42	Canada	Quebec	16-Montérégie	J3Y	CUBA	CUBA	CUBA	CUBA	34
+L00241205	ncov	2020-03-27	F	50	Canada	Quebec	16-Montérégie	J7T	Canada	Quebec	16-Montérégie	J7T	21
+L00241208	ncov	2020-03-27	F	52	Canada	Quebec	16-Montérégie	J0L	Canada	Quebec	16-Montérégie	J0L	27
+L00241214	ncov	2020-03-23	M	67	Canada	Quebec	16-Montérégie	J3Y	CUBA	CUBA	CUBA	CUBA	14
+L00241242	ncov	2020-03-27	F	69	Canada	Quebec	16-Montérégie	J4N	Spain	Spain	Spain	Spain	20
+L00241245	ncov	2020-03-27	F	63	Canada	Quebec	16-Montérégie	J3Y	CUBA	CUBA	CUBA	CUBA	19
+L00241251	ncov	2020-03-27	F	48	Canada	Quebec	16-Montérégie	J6S	Canada	Quebec	16-Montérégie	J6S	16
+L00241292	ncov	2020-03-27	M	24	Canada	Quebec	14-Lanaudière	J6X	Canada	Quebec	14-Lanaudière	J6X	27
+L00241319	ncov	2020-03-27	F	80	Canada	Quebec	16-Montérégie	J4P	FRANCE	FRANCE	FRANCE	FRANCE	27
+L00241344	ncov	2020-03-27	M	72	Canada	Quebec	16-Montérégie	J4V	Spain	Spain	Spain	Spain	14
+L00241349	ncov	2020-03-27	M	31	Canada	Quebec	16-Montérégie	J3Y	ALGERIE	ALGERIE	ALGERIE	ALGERIE	30
+L00241355	ncov	2020-03-27	M	47	Canada	Quebec	16-Montérégie	J3E	FRANCE	FRANCE	FRANCE	FRANCE	21
+L00241376	ncov	2020-03-27	M	77	Canada	Quebec	16-Montérégie	J4P	FRANCE	FRANCE	FRANCE	FRANCE	25
+L00241406	ncov	2020-03-27	M	79	Canada	Quebec	16-Montérégie	J3L	FRANCE	FRANCE	FRANCE	FRANCE	24
+L00241433	ncov	2020-03-27	F	74	Canada	Quebec	16-Montérégie	J4R	ÉTATS-UNIS	ÉTATS-UNIS	ÉTATS-UNIS	ÉTATS-UNIS	29
+L00241435	ncov	2020-03-27	F	49	Canada	Quebec	16-Montérégie	J3Y	Canada	Quebec	16-Montérégie	J3Y	23
+L00241439	ncov	2020-03-27	M	15	Canada	Quebec	16-Montérégie	J3Y	Canada	Quebec	16-Montérégie	J3Y	25
+L00241444	ncov	2020-03-27	M	14	Canada	Quebec	16-Montérégie	J3Y	Canada	Quebec	16-Montérégie	J3Y	25
+L00241513	ncov	2020-03-28	M	72	Canada	Quebec	16-Montérégie	J6L	Canada	Quebec	16-Montérégie	J6L	20
+L00241514	ncov	2020-03-28	M	28	Canada	Quebec	16-Montérégie	J5C	Canada	Quebec	16-Montérégie	J5C	23
+L00241602	ncov	2020-03-28	M	38	Canada	Quebec	16-Montérégie	J4B	Canada	Quebec	16-Montérégie	J4B	25
+L00241610	ncov	2020-03-28	M	80	Canada	Quebec	16-Montérégie	J4R	ÉTATS-UNIS	ÉTATS-UNIS	ÉTATS-UNIS	ÉTATS-UNIS	28
+L00241648	ncov	2020-03-28	F	61	Canada	Quebec	16-Montérégie	J0J	RÉP. DOMINICAINE	RÉP. DOMINICAINE	RÉP. DOMINICAINE	RÉP. DOMINICAINE	24
+L00241654	ncov	2020-03-28	M	59	Canada	Quebec	16-Montérégie	J7X	CUBA	CUBA	CUBA	CUBA	32
+L00241659	ncov	2020-03-28	M	56	Canada	Quebec	16-Montérégie	J7V	Canada	Quebec	16-Montérégie	J7V	27
+L00241670	ncov	2020-03-26	F	25	Canada	Quebec	18-Terres-Cries-de-la-Baie-James	J0Y	Canada	Quebec	18-Terres-Cries-de-la-Baie-James	J0Y	27
+L00241753	ncov	2020-03-27	F	57	Canada	Quebec	11-Gaspésie - Îles-de-la-Madeleine	G0C	Canada	Quebec	11-Gaspésie - Îles-de-la-Madeleine	G0C	22
+L00241782	ncov	2020-03-28	M	56	Canada	Quebec	06-Montréal	H8P	Canada	Quebec	06-Montréal	H8P	28
+L00241847	ncov	2020-03-28	M	51	Canada	Quebec	16-Montérégie	J3H	FRANCE	FRANCE	FRANCE	FRANCE	36
+L00241862	ncov	2020-03-28	M	0,4	Canada	Quebec	07-Outaouais	J8N	Canada	Quebec	07-Outaouais	J8N	14
+L00241890	ncov	2020-03-28	F	54	Canada	Quebec	05-Estrie	J1X	Canada	Quebec	05-Estrie	J1X	32
+L00241900	ncov	2020-03-28	F	17	Canada	Quebec	16-Montérégie	J4P	Canada	Quebec	16-Montérégie	J4P	22
+L00241901	ncov	2020-03-28	M	74	Canada	Quebec	16-Montérégie	J3G	Egypt	Egypt	Egypt	Egypt	25
+L00241907	ncov	2020-03-28	M	65	Canada	Quebec	16-Montérégie	J4Z	Canada	Quebec	16-Montérégie	J4Z	18
+L00241909	ncov	2020-03-28	F	62	Canada	Quebec	16-Montérégie	J0L	Canada	Quebec	16-Montérégie	J0L	15
+L00241924	ncov	2020-03-28	M	72	Canada	Quebec	16-Montérégie	J3H	MAROC	MAROC	MAROC	MAROC	23
+Canada/BC_37_0-2/2020	ncov	2020-02-16	Female	35	Canada	British Columbia	Canada	Canada	Iran	Iran	Iran	Iran	0
+Canada/BC_5282984/2020	ncov	2020-03-11	Male	28	Canada	British Columbia	Canada	Canada	Canada	British Columbia	Canada	Canada	0
+Canada/BC_7277381/2020	ncov	2020-03-12	Female	55	Canada	British Columbia	Canada	Canada	Canada	British Columbia	Canada	Canada	0
+Canada/ON-PHL2445/2020	ncov	2020-01-25	Male	56	Canada	Ontario	Canada	Canada	China	Hubei	China	China	0
+Canada/ON_PHL2223/2020	ncov	2020	?	?	Canada	Ontario	Canada	Canada	Canada	Ontario	Canada	Canada	0
+Canada/ON_PHL3670/2020	ncov	2020-03-20	Female	57	Canada	Ontario	Canada	Canada	Canada	Ontario	Canada	Canada	0
+Canada/ON_PHL3919/2020	ncov	2020-03-14	Female	60	Canada	Ontario	Canada	Canada	Canada	Ontario	Canada	Canada	0
+Netherlands/Utrecht_1/2020	ncov	2020-03-03	?	?	Netherlands	Utrecht	Netherlands	Netherlands	Netherlands	Utrecht	Netherlands	Netherlands	0
+Portugal/PT0090/2020	ncov	2020-03-21	Female	45	Portugal		Portugal	Portugal	Portugal		Portugal	Portugal	0
+USA/CruiseA-12/2020	ncov	2020-02-20	?	?	USA	Diamond Princess	USA	USA	USA	Diamond Princess	USA	USA	0
+Wuhan-Hu-1/2019	ncov	2019-12-26	?	?	China	Hubei	China	China	China	Hubei	China	China	0
+Wuhan/WH01/2019	ncov	2019-12-26	Male	44	China	Hubei	China	China	China	Hubei	China	China	0

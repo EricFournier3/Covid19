@@ -55,6 +55,11 @@
       "key": "country_exposure",
       "title": "Country exposure",
       "type": "categorical"
+    },
+    {
+      "key": "ct",
+      "title": "Ct",
+      "type": "continuous"
     }
   ],
   "geo_resolutions": [

@@ -20,7 +20,9 @@ pd.set_option('display.max_columns', 20)
 translator = Translator()
 logging.basicConfig(level = logging.DEBUG)
 
-base_dir = "/data/Applications/GitScript/Covid19/NextStrainFiles/" 
+#todo change basedir
+#base_dir = "/data/Applications/GitScript/Covid19/NextStrainFiles/" 
+base_dir = "/data/Applications/GitScript/Covid19_add_ct/NextStrainFiles/" 
 lat_long_file = os.path.join(base_dir,"config/lat_longs.tsv")
 country_lat_long_file = os.path.join(base_dir,"config/country_lat_long.tsv")
 ordering_file = os.path.join(base_dir,"config/ordering.tsv")
@@ -120,8 +122,8 @@ subset_lspq = df_lspq[df_lspq['NO_LSPQ'].isin(rec_id_list)]
 subset_gisaid = df_gisaid[df_gisaid['strain'].isin(rec_id_list)]
 
 #subset_lspq_subcol = subset_lspq[['NO_LSPQ','DATE_PRELEV','SEX','AGE','RSS_PATIENT','POSTAL_CODE','VOYAGE_PAYS_1']] this create a view https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-subset_lspq_subcol = subset_lspq.loc[:,('NO_LSPQ','DATE_PRELEV','SEX','AGE','RSS_PATIENT','POSTAL_CODE','VOYAGE_PAYS_1')] # this create a copy
-subset_lspq_subcol.columns = ['strain','date','sex','age','rss','rta','voyage']
+subset_lspq_subcol = subset_lspq.loc[:,('NO_LSPQ','DATE_PRELEV','SEX','AGE','RSS_PATIENT','POSTAL_CODE','VOYAGE_PAYS_1','MAX_CT')] # this create a copy
+subset_lspq_subcol.columns = ['strain','date','sex','age','rss','rta','voyage','ct']
 subset_lspq_subcol.insert(loc=1,column='virus',value='ncov',allow_duplicates=True)
 subset_lspq_subcol.insert(loc=5,column='country',value='Canada',allow_duplicates=True)
 subset_lspq_subcol.insert(loc=6,column='division',value='Quebec',allow_duplicates=True)
@@ -146,6 +148,7 @@ subset_gisaid_subcol.insert(loc=7,column='rss',value='',allow_duplicates=True)
 subset_gisaid_subcol.insert(loc=8,column='rta',value='',allow_duplicates=True)
 subset_gisaid_subcol.insert(loc=11,column='rss_exposure',value='',allow_duplicates=True)
 subset_gisaid_subcol.insert(loc=12,column='rta_exposure',value='',allow_duplicates=True)
+subset_gisaid_subcol.insert(loc=13,column='ct',value='0',allow_duplicates=True)
 subset_gisaid_subcol.loc[:,'rss'] = subset_gisaid_subcol.country
 subset_gisaid_subcol.loc[:,'rta'] = subset_gisaid_subcol.country
 subset_gisaid_subcol.loc[:,'rss_exposure'] = subset_gisaid_subcol.country_exposure
