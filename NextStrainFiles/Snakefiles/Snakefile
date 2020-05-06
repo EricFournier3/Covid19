@@ -4,6 +4,8 @@ from socket import getfqdn
 from getpass import getuser
 from snakemake.logging import logger
 import sys
+import stat
+import shutil
 from shutil import which
 
 #
@@ -38,7 +40,31 @@ def get_todays_date():
 # Add new regions here!
 #EricF comment here
 #REGIONS = ["_africa", "_asia", "_europe", "_north-america", "_oceania", "_south-america", "_global"]
-REGIONS = ["_quebec","_global"]
+#REGIONS = ["_quebec","_global"]
+REGIONS = ["_global"]
+
+nextstrain_base_dir = "/data/Applications/GitScript/Covid19/NextStrainFiles/"
+current_dir = os.getcwd()
+script_dir = os.path.join(current_dir,"scripts")
+input_script = os.path.join(nextstrain_base_dir,"scripts","PrepareInput.sh")
+config_dir = os.path.join(current_dir,"config")
+yaml_config = os.path.join(nextstrain_base_dir,"config","Snakefile.yaml")
+
+try:
+    os.mkdir(script_dir)
+except FileExistsError:
+    print("Directory ",script_dir, " already exists")
+
+try:
+    os.mkdir(config_dir)
+except FileExistsError:
+    print("Directory ",config_dir, " already exists")
+
+shutil.copyfile(input_script,os.path.join(script_dir,os.path.basename(input_script)))
+os.chmod(os.path.join(script_dir,os.path.basename(input_script)),stat.S_IRWXU | stat.S_IRWXG | stat.S_IRWXG)
+
+shutil.copyfile(yaml_config,os.path.join(config_dir,os.path.basename(yaml_config)))
+os.chmod(os.path.join(config_dir,os.path.basename(yaml_config)),stat.S_IRWXU | stat.S_IRWXG | stat.S_IRWXG)
 
 wildcard_constraints:
     region = "|".join(REGIONS) + "||",
@@ -129,6 +155,21 @@ rule filter:
 '''
 
 
+rule prepare_input:
+    message:
+        """
+        Prepare sequences.fasta and metadata.tsv
+        """
+    output:
+        sequences = "data/sequences.fasta",
+        metadata = "data/metadata.tsv"
+    params:
+        dir = current_dir
+    shell:
+        """
+        ./scripts/PrepareInput.sh {params.dir}
+        """
+
 rule filter:
     message:
         """
@@ -137,8 +178,8 @@ rule filter:
           - minimum genome length of {params.min_length}
         """
     input:
-        sequences = sequences,
-        metadata = metadata,
+        sequences = rules.prepare_input.output.sequences,
+        metadata = rules.prepare_input.output.metadata,
         include = files.include,
         exclude = files.exclude
     output:
