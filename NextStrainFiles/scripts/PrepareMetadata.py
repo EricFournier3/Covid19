@@ -29,7 +29,6 @@ pd.set_option('display.max_columns', 20)
 translator = Translator()
 logging.basicConfig(level = logging.DEBUG)
 
-
 base_dir = args.base_dir
 lat_long_file = os.path.join(base_dir,"config/lat_longs.tsv")
 country_lat_long_file = os.path.join(base_dir,"config/country_lat_long.tsv")
@@ -65,7 +64,6 @@ def ConvertFrench2English(countries_list):
             df_lspq.loc[df_lspq['VOYAGE_PAYS_1'].isin([str(country).capitalize(),str(country).lower(),str(country).upper()]),'VOYAGE_PAYS_1'] = english_country
         else:
             still_missing_countries.append(country)
-    print("MISSING ",str(still_missing_countries))
     return(still_missing_countries.copy())
 
 
@@ -74,7 +72,6 @@ def CheckMissingCountry():
     locs_w_latlong = [x.lower() for x in locs_w_latlong_orig]
 
     locs_in_lspq_orig = [x for x in df_lspq['VOYAGE_PAYS_1'].unique() if x != "AUCUN_VOYAGE"]
-    print("ORI ", locs_in_lspq_orig)
     locs_in_lspq = [x.lower() for x in locs_in_lspq_orig]
 
     missing_latlong_locs = [loc for loc in locs_in_lspq if loc not in locs_w_latlong]
