@@ -11,14 +11,10 @@ import argparse
 parser = argparse.ArgumentParser(description='Create lat_longs.tsv and ordering.tsv')
 parser.add_argument('--lat-long-out', '-l', required=True, help="path to lat_longs.tsv output")
 parser.add_argument('--ordering-out', '-o', required=True, help="path to ordering.tsv output")
-parser.add_argument('--base-dir', '-b', required=True, help="path to configuration files input")
+parser.add_argument('--base-dir', '-b', required=True, help="path to working directory")
 args=parser.parse_args()
 
-
 logging.basicConfig(level = logging.DEBUG)
-
-
-
 
 #base_dir = "/data/Applications/GitScript/Covid19/NextStrainFiles"
 base_dir = args.base_dir
